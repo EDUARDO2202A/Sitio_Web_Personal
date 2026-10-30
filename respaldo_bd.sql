@@ -23,9 +23,7 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `usuarios`
---
+
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
@@ -42,23 +40,17 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `password`, `fecha_registro`) VALUES
 (1, 'Eduardo', 'eduardocanche.mcc@gmail.com', '$2y$10$8huEGsbnolL0k0BO/4yUWeH5PGIvhZAnrv98KDetPyEKuI2Mug96m', '2026-10-30 06:24:00');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `usuarios`
---
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `correo` (`correo`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+
 --
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
