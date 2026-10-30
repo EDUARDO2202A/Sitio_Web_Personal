@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="author" content="Eduardo Sebastián Calan Canche">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <p>
+        <select onchange="if (this.value) window.location.href=this.value;">
+    <option value="" disabled selected>Hacia donde quieres ir...</option>
+    <option value="autobio.html">Mi autobiografia</option>
+    <option value="Galeria.html">Galeria amigos</option>
+    <option value="herramientas.html">herramientas</option>
+    <option value="index.html"> Regresar a Página Principal</option>
+</select>
+    </p>
+
+    <h2>Actividad</h2>
+
+   <form action="#" method="POST" onsubmit="return validarFormulario();">
+
+        <p>Uso de cajas de texto - Nombre</p>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <br><br>
+
+
+        <p>Uso de Radio Buttons - Género</p>
+
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label>
+
+        <br><br>
+
+
+        <p>Uso del CheckBox - Intereses</p>
+
+        <input type="checkbox" id="deporte" name="intereses" value="deporte">
+        <label for="deporte">Hacer Deporte</label>
+
+        <input type="checkbox" id="television" name="intereses" value="television">
+        <label for="television">Ver Televisión</label>
+
+        <input type="checkbox" id="ejercicio" name="intereses" value="ejercicio">
+        <label for="ejercicio">Hacer Ejercicio</label>
+
+        <br><br>
+
+
+        <p>Uso del Select - Estudios Actuales</p>
+
+        <select id="estudios" name="estudios">
+
+            <option value="bachillerato">Bachillerato</option>
+            <option value="licenciatura">Licenciatura</option>
+            <option value="maestria">Maestría</option>
+
+        </select>
+
+        <br><br>
+
+
+        <p>Uso del List - Navegador usado</p>
+
+        <label for="navegador">
+            Elige un navegador de esta lista:
+        </label>
+
+        <input list="navegadores" id="navegador" name="navegador">
+
+        <datalist id="navegadores">
+
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+
+        </datalist>
+
+        <br><br>
+
+
+<p>Déjame un comentario:</p>
+<textarea id="comentarios" rows="3" style="width: 100%;"></textarea>
+<br><br>
+        <button type="submit">Enviar</button>
+
+    </form>
+<script src="script.js"></script>
+</body>
+
+</html>

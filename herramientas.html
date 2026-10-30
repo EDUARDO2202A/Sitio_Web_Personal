@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Herramientas y JS</title>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Herramientas Interactivas</h1>
+
+
+        <select onchange="if (this.value) window.location.href=this.value;">
+            <option value="" disabled selected>Hacia donde quieres ir...</option>
+            <option value="index.html">Regresar a Página Principal</option>
+            <option value="autobio.html">Mi autobiografia</option>
+            <option value="contacto.html">Contacto</option>
+        </select>
+        
+        <hr>
+
+
+        <h2>Convertidor a Pesos</h2>
+        <p>Ingresa cantidad en dólares:</p>
+        <input type="number" id="dolares" placeholder="Ej. 10">
+        <button type="button" onclick="convertirPesos()">Convertir</button>
+        <p id="resultadoConvertidor" style="font-weight:bold;"></p>
+
+        <hr>
+
+   
+        <h2>Calculadora Simple</h2>
+        <input type="number" id="num1" placeholder="Número 1" style="width: 100px;">
+        <select id="operacion">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" placeholder="Número 2" style="width: 100px;">
+        <button type="button" onclick="calcular()">Calcular</button>
+        <p id="resultadoCalculadora" style="font-weight:bold;"></p>
+
+        <hr>
+
+       
+        <h2>Cuestionario sobre mí</h2>
+        <p>1. ¿En qué ciudad vivo?</p>
+        <input type="text" id="preg1" placeholder="Tu respuesta...">
+        
+        <p>2. ¿En qué universidad estudio?</p>
+        <input type="text" id="preg2" placeholder="Tu respuesta...">
+        
+        <br>
+        <button type="button" onclick="revisarCuestionario()">Calificar Cuestionario</button>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
